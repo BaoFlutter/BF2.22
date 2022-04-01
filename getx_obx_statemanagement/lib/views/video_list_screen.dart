@@ -1,9 +1,10 @@
+import 'package:api_lession/controllers/video_list_controller.dart';
+import 'package:api_lession/controllers/video_list_obx_controller.dart';
 import 'package:api_lession/data_sources/api_services.dart';
 import 'package:api_lession/models/video_model.dart';
-import 'package:api_lession/providers/video_list_provider.dart';
 import 'package:api_lession/views/detail_video_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
+import 'package:get/get.dart';
 
 import '../resources/strings.dart';
 class VideoListScreen extends StatefulWidget {
@@ -25,8 +26,6 @@ class _VideoListScreenState extends State<VideoListScreen> {
 
   @override
   Widget build(BuildContext context) {
-    // context.read<VideoListProvider>() = videoListProvider
-    final videoListProvider = Provider.of<VideoListProvider>(context);
     return Scaffold(
       appBar: AppBar(
         title: Text(VIDEO_LIST),
@@ -45,9 +44,7 @@ class _VideoListScreenState extends State<VideoListScreen> {
               child: CircularProgressIndicator(),
             );
             List<VideoModel> videoList = snapshot.data! ;
-
-            context.read<VideoListProvider>().updateVideoListOnProvider(videoList: videoList);
-            //videoListProvider.updateVideoListOnProvider(videoList: videoList);
+            Get.put(VideoListObxController()).updateVideoListOnObxController(videoList: videoList);
 
             return GridView.builder(
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(

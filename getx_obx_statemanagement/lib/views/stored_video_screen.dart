@@ -1,7 +1,9 @@
+import 'package:api_lession/controllers/video_list_controller.dart';
+import 'package:api_lession/controllers/video_list_obx_controller.dart';
 import 'package:api_lession/models/video_model.dart';
-import 'package:api_lession/providers/video_list_provider.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
+import 'package:get/get.dart';
+
 
 import '../resources/strings.dart';
 import 'detail_video_screen.dart';
@@ -10,9 +12,8 @@ class StoredVideoScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    //final videoListProvider = Provider.of<VideoListProvider>(context);
-    //List<VideoModel> videoList = videoListProvider.videoList;
-    List<VideoModel> videoList = context.watch<VideoListProvider>().videoList;
+    final VideoListObxController videoListObxController = Get.find();
+    final videoList = videoListObxController.videoListObs.value ;
     return Scaffold(
       appBar: AppBar(
         title: Text(VIDEO_LIST),

@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
         providers:[
           ChangeNotifierProvider(create: (context) => VideoListProvider()),
+
         ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,

@@ -10,5 +10,4 @@ class VideoListProvider with ChangeNotifier{
     notifyListeners();
   }
 
-
 }
