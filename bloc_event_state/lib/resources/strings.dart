@@ -1,0 +1,1 @@
+const COUNTER = "Đồng hồ đếm ngược";
