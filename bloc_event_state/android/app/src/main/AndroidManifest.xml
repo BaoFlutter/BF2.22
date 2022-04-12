@@ -1,8 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.baoflutter.bloc_event_state">
    <application
-        android:label="bloc_event_state"
-        android:name="${applicationName}"
+        android:label="Timer"
+        android:name="Timer"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
