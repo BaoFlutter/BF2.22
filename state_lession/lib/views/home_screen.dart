@@ -15,6 +15,7 @@ class _HomeScreenState extends State<HomeScreen> {
   TextEditingController? soBiTruController , soTruController;
   String resultNumber = "Chưa xác định";
    //2.  if(mounted)  print("State đã tồn tại");
+  String adjustment = "Chưa xác định";
 
   // 3. Khởi động State
   @override
@@ -73,13 +74,19 @@ class _HomeScreenState extends State<HomeScreen> {
                 onPressed: (){
                   setState(() {
                     resultNumber = (int.parse(soBiTruController!.text) - int.parse(soTruController!.text)).toString();
+                    adjustment = adjust(number: int.parse(resultNumber));
                   });
                 },
                 child: Text("Tính hiệu", style: TextStyle(color: Colors.redAccent, fontWeight: FontWeight.bold),)),
             Container(
               child: Card(
                 child: Center(
-                  child: Text(resultNumber),
+                  child: Column(
+                    children: [
+                      Text(resultNumber),
+                      Text(adjustment)
+                    ],
+                  )
                 )
               ),
             ),
@@ -119,4 +126,9 @@ class _HomeScreenState extends State<HomeScreen> {
   }
   // mounted = false;
 
+  String adjust({number}){
+    if((number < 0) ||(number>10)) return "Điểm không hợp lệ";
+    if(number < 5) return "Chưa đạt";
+    return "Đạt";
+  }
 }
