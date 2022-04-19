@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "880270036906",
+    "project_id": "bf22chat",
+    "storage_bucket": "bf22chat.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:880270036906:android:341778c2bed064fa2325d3",
+        "android_client_info": {
+          "package_name": "com.baoflutter.bf22chat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "880270036906-49vrg2udc8lgh0vi4b3k2hf0nr5n6k0v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.baoflutter.bf22chat",
+            "certificate_hash": "3d57b9423f94a184961bbe6e80d55d7da544e535"
+          }
+        },
+        {
+          "client_id": "880270036906-3mjvj964o12cimb106536bvm3b91knv3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAgX3vo-DTKWS33nyOKW4jUFIlnuVgFNN4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "880270036906-3mjvj964o12cimb106536bvm3b91knv3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
